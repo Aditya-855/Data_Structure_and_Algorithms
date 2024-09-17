@@ -3,7 +3,7 @@ package Leetcode;
 public class Ceiling_of_a_Number {
     public static void main(String[] args) {
         int [] arr={-18,-12,-4,0,2,3,4,15,16,18,22,45,89};
-        int target=17;
+        int target=1;
         int ans= ceiling(arr,target);
         System.out.println(ans);
     }
