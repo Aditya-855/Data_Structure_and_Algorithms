@@ -29,11 +29,11 @@ public class Permutations_2 {
             nums[j] = t;
         }
 
-        public List<List<Integer>> permute(int[] nums) {
-            List<List<Integer>> ans = new ArrayList<>();
-            recurPermute(0, nums, ans);
-            return ans;
-        }
+//        public List<List<Integer>> permute(int[] nums) {
+//            List<List<Integer>> ans = new ArrayList<>();
+//            recurPermute(0, nums, ans);
+//            return ans;
+//        }
 
         public static void main(String[] args) {
             Solution sol = new Solution();
