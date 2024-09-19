@@ -1,15 +1,17 @@
-package Leetcode;
-
-public class Single_Number_2 {
-    public static void main(String[] args) {
-        int[] nums={1,5,5,1,7};
-        System.out.println(Solution(nums));
-    }
-    public static int Solution(int[] nums){
-        int result=0;
-        for (int i=0;i<nums.length;i++){
-            result=result^nums[i];
-        }
-        return result;
-    }
-}
+//package Leetcode;
+//import java.util.Arrays;
+//public class Single_Number_2 {
+//    public static void main(String[] args) {
+//        int[] nums={2,2,2,3};
+//        System.out.println(singleNumber(nums));
+//    }
+//    public static int singleNumber(int[] nums) {
+//        Arrays.sort(nums);
+//        for(int i=0;i<nums.length;i++){
+//            if(nums[i]!=nums[i+1]){
+//                return nums[i];
+//            }
+//        }
+//        return nums;
+//    }
+//}
