@@ -15,7 +15,7 @@ public class Contains_Duplicate_2 {
                 Hm.put(nums[i],i);
             }else{
                 int PastIndex=Hm.get(nums[i]);
-                if(Math.abs(PastIndex-i)<=k){
+                if(Math.abs(PastIndex-i)<=k){  //past index-current index
                     return true;
                 }else{
                     Hm.put(nums[i],i);
