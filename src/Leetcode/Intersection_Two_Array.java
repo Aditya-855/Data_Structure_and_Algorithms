@@ -29,7 +29,6 @@ public class Intersection_Two_Array {
                 set.remove(nums2[i]);
             }
         }
-
         // Convert ArrayList to array
         int[] arr = new int[ans.size()];
         for (int i = 0; i < ans.size(); i++) {
