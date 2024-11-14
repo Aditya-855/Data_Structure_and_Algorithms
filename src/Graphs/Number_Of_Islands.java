@@ -3,8 +3,7 @@ package Graphs;
 import java.util.*;
 public class Number_Of_Islands  {
     // Function to return Breadth First Traversal of given graph.
-    public ArrayList<Integer> bfsOfGraph(int V,
-                                         ArrayList<ArrayList<Integer>> adj) {
+    public ArrayList<Integer> bfsOfGraph(int V, ArrayList<ArrayList<Integer>> adj) {
 
         ArrayList < Integer > bfs = new ArrayList < > ();
         boolean vis[] = new boolean[V];
