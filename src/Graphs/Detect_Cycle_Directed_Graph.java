@@ -4,14 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Detect_Cycle_Directed_Graph {
-
     // Method to check for a cycle using Depth-First Search (DFS)
     public boolean isCycleDFS(List<Integer>[] adj, int u, boolean[] visited, boolean[] inRecursion) {
         // Mark the current node as visited and part of the recursion stack
         visited[u] = true;
         inRecursion[u] = true;
 
-        // Traverse all neighbors of the current node
+        // Traverse all neighbours of the current node
         for (int v : adj[u]) {
             // If a neighbor is not visited, recursively check for a cycle
             if (!visited[v] && isCycleDFS(adj, v, visited, inRecursion)) {
@@ -43,7 +42,6 @@ public class Detect_Cycle_Directed_Graph {
         }
         return false; // No cycle found in the graph
     }
-
     public static void main(String[] args) {
         int V = 4; // Number of vertices in the graph
 

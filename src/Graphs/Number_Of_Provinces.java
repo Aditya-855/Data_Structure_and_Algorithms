@@ -4,36 +4,60 @@ import javax.swing.*;
 import java.util.ArrayList;
 
 public class Number_Of_Provinces {
-    private static void dfs(int node, ArrayList<ArrayList<Integer>> adjLs,int vis[]){
-        vis[node]=1;
-        for(Integer it:adjLs.get(node)){
-            if(vis[it]==0){
-                dfs(it,adjLs,vis);
+// Class to find the number of connected components in a graph represented as an adjacency matrix.
+    private int n; // Number of nodes in the graph
+
+    /**
+     * Depth-First Search (DFS) to traverse all connected nodes.
+     * @param isConnected - Adjacency matrix of the graph
+     * @param u - Current node to explore
+     * @param visited - Array to track visited nodes
+     */
+    private void dfs(int[][] isConnected, int u, boolean[] visited) {
+        visited[u] = true; // Mark the current node as visited
+
+        // Visit all neighbors of the current node
+        for (int v = 0; v < n; v++) {
+            if (!visited[v] && isConnected[u][v] == 1) { // If not visited and there is a connection
+                dfs(isConnected, v, visited); // Recur for the neighbor
             }
         }
     }
-    static int numProvinces(ArrayList<ArrayList<Integer>> adj,int V){
-        ArrayList<ArrayList<Integer>> adjLs=new ArrayList<ArrayList<Integer>>();
-        for (int i=0;i<V;i++){
-            adjLs.add(new ArrayList<Integer>());
-        }
-        //to change adjacency matrix to list
-        for(int i=0;i<V;i++){
-            for (int j=0;j<V;j++){
-                if(adj.get(i).get(j)==1 && i!=j){
-                    adjLs.get(i).add(j);
-                    adjLs.get(j).add(i);
-                }
+
+    /**
+     * Find the number of connected components (provinces).
+     * @param isConnected - Adjacency matrix of the graph
+     * @return Number of connected components
+     */
+    public int findCircleNum(int[][] isConnected) {
+        n = isConnected.length; // Initialize the number of nodes
+
+        boolean[] visited = new boolean[n]; // Track visited nodes
+        int count = 0; // Count of connected components
+
+        // Iterate over each node
+        for (int i = 0; i < n; i++) {
+            if (!visited[i]) { // If the node has not been visited
+                count++; // Increment the connected component count
+                dfs(isConnected, i, visited); // Perform DFS from the current node
             }
         }
-        int vis[] =new int[V];
-        int cnt=0;
-        for(int i=0;i<V;i++){
-            if(vis[i]==0){
-                cnt++;
-                dfs(i,adjLs,vis);
-            }
-        }
-        return cnt;
+
+        return count; // Return the total number of connected components
+    }
+
+    public static void main(String[] args) {
+        Number_Of_Provinces solution = new Number_Of_Provinces();
+
+        // Example input: Adjacency matrix representing connections between nodes
+        int[][] isConnected = {
+                {1, 1, 0},
+                {1, 1, 0},
+                {0, 0, 1}
+        };
+
+        // Output the number of connected components (provinces)
+        System.out.println("Number of Provinces: " + solution.findCircleNum(isConnected));
     }
 }
+
