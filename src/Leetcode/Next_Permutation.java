@@ -6,11 +6,11 @@ class Next_Permutation {
         int n = nums.length;
 
         // First, find the "blue circle" index
-        int index = -1;
+        int index = -1;//setting the index as none
 
-        for (int i = n - 1; i > 0; i--) {
+        for (int i = n - 1; i > 0; i--) {//traversing from back side
             if (nums[i] > nums[i - 1]) {
-                index = i - 1;
+                index = i - 1;//if condition satisfy then we assign the index value
                 break;
             }
         }
