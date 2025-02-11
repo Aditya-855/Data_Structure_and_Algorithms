@@ -1,31 +1,37 @@
 package Leetcode;
 
-public class Reverse_String {
-    public static void main(String[] args) {
-        String s="Hello World ";
-        System.out.println(reverseWords(s.toCharArray()));
-    }
-    static void reverse(char s[],int start,int end){
-        char temp;
-        while(start<=end){
-            temp=s[start];
-            s[start]=s[end];
-            s[end]=temp;
-            start++;
-            end--;
-        }
-    }
-    static char[] reverseWords(char[] s){
-        int start=0;
-        for (int end=0;end<s.length;end++){
-            if (s[end]==' '){
-                reverse(s, start, end);
-                start=end+1;
-            }
-        }
-        reverse(s,start,s.length-1);
+import java.util.Arrays;
 
-        reverse(s,0,s.length-1);
-        return s;
+public class Reverse_String {
+    // Function to reverse a character array in-place
+    public void reverseString(char[] s) {
+        int i = 0;
+        int j = s.length - 1; // Initialize two pointers
+
+        // Swap characters from both ends moving towards the center
+        while (i < j) {
+            char temp = s[i]; // Store the left character
+            s[i] = s[j]; // Swap left with right
+            s[j] = temp; // Swap right with left
+            i++; // Move left pointer forward
+            j--; // Move right pointer backward
+        }
+    }
+
+    public static void main(String[] args) {
+        Reverse_String  solution = new Reverse_String ();
+
+        // Test input character array
+        char[] s = {'h', 'e', 'l', 'l', 'o'};
+
+        // Printing original array
+        System.out.println("Original array: " + Arrays.toString(s));
+
+        // Calling the function to reverse the string
+        solution.reverseString(s);
+
+        // Printing the reversed array
+        System.out.println("Reversed array: " + Arrays.toString(s));
     }
 }
+
