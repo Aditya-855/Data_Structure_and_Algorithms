@@ -1,6 +1,5 @@
 package Arrays;
 
-
 public class Climbing_Stairs {
     public static void main(String[] args) {
         int n = 3;
