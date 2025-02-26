@@ -1,27 +1,32 @@
 package Insertion_Sort;
 
-import java.util.Arrays;
-
 public class Insertion_Sort {
-    public static void main(String[] args) {
-        int[] arr={5,3,4,1,2};
-        insertion(arr);
-        System.out.println(Arrays.toString(arr));
-    }
-    static void insertion(int[] arr){
-        for (int i=0;i<arr.length-1;i++){
-            for (int j=i+1;j>0;j--){
-                if (arr[j]<arr[j-1]){
-                    swap(arr,j,j-1);
-                }else{
-                    break;
-                }
+    static void insertion_sort(int[] arr, int n) {
+        for (int i = 0; i <= n - 1; i++) {
+            int j = i;
+            while (j > 0 && arr[j - 1] > arr[j]) {
+                int temp = arr[j - 1];
+                arr[j - 1] = arr[j];
+                arr[j] = temp;
+                j--;
             }
         }
+
+        System.out.println("After insertion sort: ");
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
     }
-    static void swap(int[] arr,int first,int second){
-        int temp=arr[first];
-        arr[first]=arr[second];
-        arr[second]=temp;
+    public static void main(String args[]) {
+        int arr[] = {13, 46, 24, 52, 20, 9};
+        int n = arr.length;
+        System.out.println("Before Using insertion Sort: ");
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+        insertion_sort(arr, n);
     }
+
 }
