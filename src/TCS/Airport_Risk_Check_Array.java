@@ -27,23 +27,23 @@ public class Airport_Risk_Check_Array {
 //        Arrays.sort(nums);
 //        return nums;
         int n= nums.length;
-        int i=0;
-        int j=0;
-        int k=n-1;
-        while (j<=k){
-            if(nums[j]==0) {
-                swap(nums,j,i);
-                i++;
-                j++;
-            }else if(nums[j]==1){
-                j++;
+        int start=0;
+        int mid=0;
+        int end=n-1;
+        while (mid<=end){
+            if(nums[mid]==0) {
+                swap(nums,mid,start);
+                start++;
+                mid++;
+            }else if(nums[mid]==1){
+                mid++;
             }else{
-                swap(nums,j,k);
-                k--;
+                swap(nums,mid,end);
+                end--;
             }
         }
-//        for (i=0;i<n;i++){
-//            System.out.println(i+" ");
+//        for (int it:nums){
+//            System.out.println(it+" ");
 //        }
         return nums;
     }
