@@ -4,7 +4,7 @@ public class Percentage_of_Letter_in_String {
     // Method to calculate the percentage of 'letter' in string 's'
     public int percentageLetter(String s, char letter) {
         int n = s.length();  // Get the length of the string
-        int count = 0;        // Initialize count of occurrences of 'letter'
+        int count = 0;  // Initialize count of occurrences of 'letter'
 
         // Loop through the string to count occurrences of 'letter'
         for (int i = 0; i < n; i++) {

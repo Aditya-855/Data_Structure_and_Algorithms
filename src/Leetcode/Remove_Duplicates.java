@@ -2,7 +2,8 @@ package Leetcode;
 
 public class Remove_Duplicates {
     public static void main(String[] args) {
-        int[] nums={1,1,2,2,3,4};
+        Remove_Duplicates sol=new Remove_Duplicates();
+        int[] nums={1,1,2,2,3,4,5,5,6};
         System.out.println(remveduplicates(nums));
     }
     public static int remveduplicates(int[] nums){

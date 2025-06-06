@@ -8,15 +8,13 @@ public class Swap {
        // swap(arr,0,4);
 
         reverse(arr);
-
         System.out.println(Arrays.toString(arr));
 
     }
-
     static void reverse(int[] arr){
         int start=0;
         int end=arr.length-1;
-      //  int end =3;
+        //int end =3;
         while (start<end){
             //swap
             swap(arr,start,end);

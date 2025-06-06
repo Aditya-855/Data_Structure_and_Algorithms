@@ -16,5 +16,4 @@ public class Reverse_integer{
         }
         return rev;
    }
-
 }

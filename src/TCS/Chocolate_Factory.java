@@ -10,7 +10,7 @@ import java.util.Arrays;
 public class Chocolate_Factory {
     public static void main(String[] args) {
         Chocolate_Factory sol=new Chocolate_Factory();
-        int[] nums={4,5,0,1,9,0,5,0};
+        int[] nums={4,5,0,1,9,0,5,0,};
         System.out.println("Original Array: "+Arrays.toString(nums));
 
         int[] result=sol.Solution(nums);

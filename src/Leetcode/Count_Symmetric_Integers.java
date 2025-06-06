@@ -18,7 +18,7 @@ public class Count_Symmetric_Integers {
             // Calculate the sum of the first and second halves
             for (int i = 0; i < mid; i++) {
                 leftSum += s.charAt(i) - '0';         // Convert char to int by subtracting '0'
-                rightSum += s.charAt(i + mid) - '0';  // Sum the digits in the right half
+                rightSum += s.charAt(i + mid - '0') ;  // Sum the digits in the right half 
             }
 
             // If the sum of left and right halves are equal, it's a symmetric number
