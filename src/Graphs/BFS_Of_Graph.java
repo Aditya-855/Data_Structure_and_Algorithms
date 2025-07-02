@@ -21,7 +21,6 @@ public class BFS_Of_Graph{
             }
         }
     }
-
     // Function to return Breadth First Traversal of the graph
     public List<Integer> bfsOfGraph(int V, List<List<Integer>> adj) {
         List<Integer> result = new ArrayList<>();
@@ -62,7 +61,6 @@ public class BFS_Of_Graph{
             }
             System.out.println();
         }
-
         sc.close();
     }
 }

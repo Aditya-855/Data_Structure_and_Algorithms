@@ -12,12 +12,15 @@ public class Is_Prime {
     }
     public static void main(String[] args) {
         int n2 = 10;
+        int count=0;
         for (int i = 1; i < n2; i++) {
             if (isprime(i)) {
+                count++;
                 System.out.println(i + " Number is Prime");
             } else {
                 System.out.println(i + " Number is Not Prime");
             }
         }
+         System.out.println("Total Prime Number is:"+count);
     }
 }

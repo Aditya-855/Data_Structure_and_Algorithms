@@ -41,7 +41,7 @@ public class DFS_Of_Graph {
                 adj.get(v).add(u); // For undirected graph, remove for directed graph
             }
 
-            // Create DFS object and run DFS
+            // Create DFS Object and run DFS
             DFS_Of_Graph obj = new DFS_Of_Graph();
             List<Integer> ans = obj.dfsOfGraph(V, adj);
 
