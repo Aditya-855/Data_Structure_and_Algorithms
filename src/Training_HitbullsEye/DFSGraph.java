@@ -32,8 +32,7 @@ public class DFSGraph {
 
     // To add an edge in an undirected graph
     public static void
-    addEdge(ArrayList<ArrayList<Integer> > adj, int s,
-            int t)
+    addEdge(ArrayList<ArrayList<Integer> > adj, int s, int t)
     {
         adj.get(s).add(t);
         adj.get(t).add(s);
